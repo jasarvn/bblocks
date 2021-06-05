@@ -7,12 +7,15 @@ require_once(root::getRootInstance()->get_system_path()."Controller\Controller.p
 class Welcome extends Controller{
 
   public function __construct(){
+
+    parent::__construct();
     echo "controller successful";
   }
 
   public function index(){
 
-      echo "welcome jasper";
+    $b = $this->a["test_model"]->test();
+    var_dump($b);
   }
 
 }

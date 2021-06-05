@@ -40,7 +40,7 @@ class log {
   }
 
   private function generate_file_name(){
-    return "LOG_".date('Ymd').".txt";
+    return "LOG_".date('Ymd').".log";
   }
 
   private function check_log(){
