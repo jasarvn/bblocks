@@ -9,13 +9,18 @@ class Welcome extends Controller{
   public function __construct(){
 
     parent::__construct();
-    echo "controller successful";
+  //  echo "controller successful";
   }
 
   public function index(){
+    $data = array(
+                    "a"=>"hello world!!!!",
+                    "b"=> $this->a["test_model"]->test()
+                  );
 
-    $b = $this->a["test_model"]->test();
-    var_dump($b);
+    $this->View("Welcome.php",$data);
+
+
   }
 
 }
